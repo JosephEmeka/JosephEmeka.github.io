@@ -13,7 +13,7 @@ let table = $('#pixelCanvas');
 form.submit(function(e) {
 
 	e.preventDefault();
-	
+
 	table.html("");
 
 	let height = $('#inputHeight').val();
@@ -34,12 +34,14 @@ function makeGrid(height, width) {
 
 			table.append("<tr></tr>");
 
+			for(var j = 1; j <= width; j++) {
+
+				  $("tr:last").append("<td></td>");
+			}
+
 	};
 
-	for(var j = 1; j <= width; j++) {
-
-		  $("tr").append("<td></td>");
-	}
+	
 
 
 	$("td").click(function() {
